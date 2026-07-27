@@ -52,7 +52,7 @@
     instagram: 'https://www.instagram.com/abrapesp_oficial/',
     youtube:   'https://www.youtube.com/@abrapesp3878',
     facebook:  'https://www.facebook.com/abrapesp',
-    linkedin:  'https://www.linkedin.com/company/abrapespoficial/',
+    linkedin:  'https://www.linkedin.com/company/abrapesp_oficial/',
     twitter:   'https://twitter.com/abrapesp',
     email:     'tesouraria@abrapesp.org.br'
   };
