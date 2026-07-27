@@ -151,7 +151,7 @@
           '</a>'+
           '<nav class="nav" aria-label="Menu principal"><ul>'+itemsHtml+'</ul></nav>'+
           '<div class="header-cta">'+
-            '<a class="btn btn--ghost btn--sm" href="'+LOGIN+'" target="_blank" rel="noopener">Área do associado</a>'+
+            '<a class="btn btn--ghost btn--sm" href="'+LOGIN+'" target="_blank" rel="noopener">Entrar</a>'+
             '<a class="btn btn--brand btn--sm" href="associe-se.html">Associe-se</a>'+
             '<button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>'+
           '</div>'+
@@ -305,6 +305,24 @@
     host.innerHTML = list.map(newsCard).join('');
   }
 
+  function renderFeatured() {
+    var host = document.querySelector('[data-news-featured]');
+    if (!host) return;
+    var list = allNews().filter(function(n){ return n.catSlug==='noticia'; }).slice(0, 5);
+    if (!list.length) return;
+    var f = list[0], rest = list.slice(1, 5);
+    var main = '<a class="feat-main reveal" href="'+f.slug+'.html">'+
+      '<div class="feat-main__media"><span class="news-card__tag">'+f.cat+'</span>'+(f.img?'<img src="'+f.img+'" alt="'+escq(f.title)+'" loading="lazy">':'')+'</div>'+
+      '<div class="feat-main__body"><div class="news-card__date">'+f.date+'</div><h3>'+f.title+'</h3>'+
+      '<p class="news-card__excerpt">'+(f.excerpt||'')+'</p><span class="news-card__more">Ler notícia '+svg('arrow')+'</span></div></a>';
+    var items = rest.map(function(n){
+      return '<a class="feat-item reveal" href="'+n.slug+'.html">'+
+        '<div class="feat-item__media">'+(n.img?'<img src="'+n.img+'" alt="'+escq(n.title)+'" loading="lazy">':'')+'</div>'+
+        '<div class="feat-item__body"><div class="feat-item__date">'+n.date+'</div><div class="feat-item__title">'+n.title+'</div></div></a>';
+    }).join('');
+    host.innerHTML = main + '<div class="feat-list">'+items+'</div>';
+  }
+
   function renderColunaHome() {
     var host = document.querySelector('[data-coluna-grid]');
     if (!host) return;
@@ -407,6 +425,7 @@
 
     initHeaderBehaviour();
     renderNews();
+    renderFeatured();
     renderColunaHome();
     renderDiretoria();
     renderParceiros();
