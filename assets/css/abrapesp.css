@@ -636,3 +636,85 @@ body.menu-open .mobile-nav{ transform:translateX(0); }
   .hero__glass b{ font-size:1.3rem; }
   .feat-item{ grid-template-columns:88px 1fr; }
 }
+
+/* ============================================================
+   BOTÕES — GARANTIAS DE CONTRASTE
+   Regras no fim do arquivo para vencer, por ordem, qualquer
+   herança de cor de link vinda de containers (footer, cards etc.)
+   ============================================================ */
+
+/* 1. Cada variante reafirma a própria cor, onde quer que esteja */
+.btn.btn--gold,
+.btn.btn--gold:visited{ color:var(--brand-ink); }
+.btn.btn--gold:hover,
+.btn.btn--gold:focus-visible{ color:var(--brand-ink); }
+
+.btn.btn--brand,
+.btn.btn--brand:visited,
+.btn.btn--brand:hover,
+.btn.btn--brand:focus-visible{ color:#fff; }
+
+.btn.btn--light,
+.btn.btn--light:visited{ color:var(--brand); }
+.btn.btn--light:hover,
+.btn.btn--light:focus-visible{ color:var(--brand-deep); }
+
+/* 2. Ghost sobre fundo claro — borda e texto com contraste real */
+.btn.btn--ghost,
+.btn.btn--ghost:visited{ color:var(--brand); border-color:rgba(26,60,168,.34); background:transparent; }
+.btn.btn--ghost:hover,
+.btn.btn--ghost:focus-visible{ background:var(--brand); border-color:var(--brand); color:#fff; }
+
+/* 3. Ghost sobre qualquer superfície escura — texto branco */
+.hero .btn.btn--ghost,
+.page-hero .btn.btn--ghost,
+.section--dark .btn.btn--ghost,
+.cta-band .btn.btn--ghost,
+.congress__body .btn.btn--ghost,
+.contact-card .btn.btn--ghost,
+.site-footer .btn.btn--ghost,
+.site-header.is-transparent .btn.btn--ghost,
+.hero .btn.btn--ghost:visited,
+.page-hero .btn.btn--ghost:visited,
+.section--dark .btn.btn--ghost:visited,
+.cta-band .btn.btn--ghost:visited,
+.congress__body .btn.btn--ghost:visited,
+.contact-card .btn.btn--ghost:visited,
+.site-footer .btn.btn--ghost:visited,
+.site-header.is-transparent .btn.btn--ghost:visited{
+  color:#fff; border-color:rgba(255,255,255,.55); background:transparent;
+}
+.hero .btn.btn--ghost:hover,
+.page-hero .btn.btn--ghost:hover,
+.section--dark .btn.btn--ghost:hover,
+.cta-band .btn.btn--ghost:hover,
+.congress__body .btn.btn--ghost:hover,
+.contact-card .btn.btn--ghost:hover,
+.site-footer .btn.btn--ghost:hover,
+.site-header.is-transparent .btn.btn--ghost:hover,
+.hero .btn.btn--ghost:focus-visible,
+.page-hero .btn.btn--ghost:focus-visible,
+.section--dark .btn.btn--ghost:focus-visible,
+.cta-band .btn.btn--ghost:focus-visible,
+.congress__body .btn.btn--ghost:focus-visible,
+.contact-card .btn.btn--ghost:focus-visible,
+.site-footer .btn.btn--ghost:focus-visible,
+.site-header.is-transparent .btn.btn--ghost:focus-visible{
+  background:#fff; color:var(--brand); border-color:#fff;
+}
+
+/* 4. Foco visível por teclado em todos os botões */
+.btn:focus-visible{ outline:3px solid var(--gold-bright); outline-offset:3px; }
+
+/* 5. Kicker (texto "olho") sobre superfícies escuras */
+.hero .kicker,
+.page-hero .kicker,
+.cta-band .kicker,
+.congress__body .kicker,
+.contact-card .kicker{ color:var(--gold-bright); }
+
+/* 6. Logotipo do rodapé herda cor de link azul sobre fundo navy */
+.site-footer .brand{ color:#fff; }
+
+/* 7. Ícone de fechar do menu mobile sobre header transparente */
+body.menu-open .site-header.is-transparent .burger span{ background:#fff; }
