@@ -56,7 +56,8 @@
     twitter:   'https://twitter.com/abrapesp',
     email:     'tesouraria@abrapesp.org.br'
   };
-  var LOGIN = 'https://associacoes.softaliza.com.br/login/abrapesp';
+  var PLATAFORMA = 'https://assocializa.com.br/abrapesp';        /* Assocializa — planos + login */
+  var LOGIN = PLATAFORMA + '#login';           /* área do associado */
   var CONGRESSO = 'https://app.ciente.studio/abrapesp2025';
   var REVISTA = 'https://portalrevistas.ucb.br/index.php/RBPE';
   var CNPJ = '08.281.609/0001-98';
