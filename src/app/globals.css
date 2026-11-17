@@ -1,0 +1,10 @@
+/*
+ * A folha de estilo do site é a mesma do site estático anterior, trazida
+ * inteira: é o visual que a ABRAPESP aprovou, com as correções de
+ * contraste dos botões já aplicadas. Os componentes React reproduzem o
+ * mesmo markup e por isso reusam as mesmas classes.
+ *
+ * O painel (/admin) tem folha própria e não herda nada daqui.
+ */
+@import "../estilos/fonts.css";
+@import "../estilos/abrapesp.css";
