@@ -15,7 +15,7 @@ export default async function PaginaDeLogin() {
           Painel da ABRAPESP
         </h1>
         <p className="mt-2 text-sm leading-relaxed text-ardosia-600">
-          Entre para publicar notícias e textos do blog.
+          Entre para publicar notícias e colunas de associados.
         </p>
 
         {painelConfigurado() ? (
