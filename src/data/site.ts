@@ -1,7 +1,7 @@
 /**
  * Os dados fixos do site, num lugar só.
  *
- * Vieram de public/assets/js/abrapesp.js, que montava o cabeçalho e o
+ * Vieram de legado/assets/js/abrapesp.js, que montava o cabeçalho e o
  * rodapé no navegador. Aqui eles são dados de verdade, lidos no servidor:
  * o menu passa a existir no HTML entregue, em vez de aparecer depois que
  * o JavaScript roda.

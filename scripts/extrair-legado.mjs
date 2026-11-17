@@ -21,7 +21,7 @@ const legado = path.join(raiz, "legado");
 /** Lê o índice de notícias sem precisar de um navegador. */
 function lerIndice() {
   const js = fs.readFileSync(
-    path.join(raiz, "public/assets/js/noticias-data.js"),
+    path.join(legado, "assets/js/noticias-data.js"),
     "utf8",
   );
   const abre = js.indexOf("[");

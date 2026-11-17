@@ -1,7 +1,7 @@
 /**
  * Os ícones do site, no traço do desenho original (feather-style).
  *
- * Portados de public/assets/js/abrapesp.js sem mudar um ponto do
+ * Portados de legado/assets/js/abrapesp.js sem mudar um ponto do
  * caminho: o visual tem de continuar idêntico ao que está no ar.
  */
 

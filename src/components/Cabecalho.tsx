@@ -50,10 +50,15 @@ export default function Cabecalho() {
   }, [menuAberto]);
 
   /* Navegar fecha o menu: sem isto ele fica aberto por cima da página
-     nova, porque no Next a troca de rota não recarrega a página. */
-  useEffect(() => {
+     nova, porque no Next a troca de rota não recarrega a página.
+     O ajuste acontece durante a renderização, comparando com a rota
+     anterior, que é o padrão do React para reagir a um valor novo vindo
+     de fora — um efeito aqui provocaria um render a mais. */
+  const [rotaAnterior, setRotaAnterior] = useState(rota);
+  if (rota !== rotaAnterior) {
+    setRotaAnterior(rota);
     setMenuAberto(false);
-  }, [rota]);
+  }
 
   const transparente = comHero && !rolou;
 

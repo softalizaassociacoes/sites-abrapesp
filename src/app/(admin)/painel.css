@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/**
+ * A folha do painel, separada da do site.
+ *
+ * O painel é ferramenta, não página: quem publica não precisa do menu do
+ * visitante nem das animações de entrada. Separar as duas também impede
+ * que um ajuste no visual do site mexa, sem querer, na tela de quem está
+ * trabalhando.
+ *
+ * As cores são as da marca, nas mesmas da folha do site (src/estilos):
+ * azul royal #1a3ca8 e ouro #f5b301.
+ */
+
+@theme {
+  /* ----------------------------------------------------------------
+     Azul — a cor da marca, do emblema da ABRAPESP.
+     ---------------------------------------------------------------- */
+  --color-azul-50: #f2f5fd;
+  --color-azul-100: #e2e9fa;
+  --color-azul-200: #c5d3f5;
+  --color-azul-300: #9db3ec;
+  --color-azul-400: #6b8ae0;
+  --color-azul-500: #3f62d1;
+  --color-azul-600: #2a4bbd;
+  --color-azul-700: #1a3ca8; /* marca */
+  --color-azul-800: #172f84;
+  --color-azul-900: #132763;
+  --color-azul-950: #0c1636;
+
+  /* ----------------------------------------------------------------
+     Ouro — a figura do emblema. Destaques e avisos.
+     ---------------------------------------------------------------- */
+  --color-ouro-50: #fffaeb;
+  --color-ouro-100: #fef0c7;
+  --color-ouro-200: #fde08a;
+  --color-ouro-300: #ffcf3f;
+  --color-ouro-400: #f5b301; /* marca */
+  --color-ouro-500: #d99700;
+  --color-ouro-600: #b87b03;
+  --color-ouro-700: #935f08;
+  --color-ouro-800: #7a4d0e;
+  --color-ouro-900: #68420f;
+  --color-ouro-950: #3d2403;
+
+  /* ----------------------------------------------------------------
+     Ardósia — os neutros, puxados para o azul da marca, como no site.
+     ---------------------------------------------------------------- */
+  --color-ardosia-50: #f7f8fc;
+  --color-ardosia-100: #eef1f8;
+  --color-ardosia-200: #e5e8f2;
+  --color-ardosia-300: #cfd5e6;
+  --color-ardosia-400: #a3acc8;
+  --color-ardosia-500: #6b7596;
+  --color-ardosia-600: #4e5879;
+  --color-ardosia-700: #3a466b;
+  --color-ardosia-800: #27304f;
+  --color-ardosia-900: #161f3d;
+  --color-ardosia-950: #0e1836;
+
+  /* Verde entra com parcimônia: só estado de sucesso. */
+  --color-verde-50: #f0faf3;
+  --color-verde-200: #bbf0cb;
+  --color-verde-600: #16a34a;
+  --color-verde-700: #15803d;
+  --color-verde-900: #14532d;
+
+  --font-display: "Space Grotesk", var(--font-sans);
+
+  --shadow-cartao:
+    0 1px 2px rgb(12 22 54 / 0.04), 0 8px 24px -12px rgb(12 22 54 / 0.18);
+  --shadow-cartao-alto:
+    0 2px 4px rgb(12 22 54 / 0.06), 0 16px 40px -16px rgb(12 22 54 / 0.28);
+}
+
+/* A faixa azul-ouro que marca o topo dos cartões, no lugar do fio
+   decorativo: é o par de cores do emblema, na ordem em que ele usa. */
+.faixa-marca {
+  background: linear-gradient(90deg, var(--color-azul-700) 0%, var(--color-azul-500) 55%, var(--color-ouro-400) 100%);
+}

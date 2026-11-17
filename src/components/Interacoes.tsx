@@ -13,7 +13,7 @@ import Icone from "@/components/Icone";
  * o documento, e sem isto a segunda página abriria com tudo invisível,
  * porque `.reveal` começa transparente na folha de estilo.
  */
-function usarAnimacoesDeEntrada() {
+function AnimacoesDeEntrada() {
   const rota = usePathname();
 
   useEffect(() => {
@@ -69,6 +69,8 @@ function usarAnimacoesDeEntrada() {
       contador.disconnect();
     };
   }, [rota]);
+
+  return null;
 }
 
 /** O botão redondo que volta ao topo, a partir de 600px de rolagem. */
@@ -95,6 +97,10 @@ function VoltarAoTopo() {
 }
 
 export default function Interacoes() {
-  usarAnimacoesDeEntrada();
-  return <VoltarAoTopo />;
+  return (
+    <>
+      <AnimacoesDeEntrada />
+      <VoltarAoTopo />
+    </>
+  );
 }

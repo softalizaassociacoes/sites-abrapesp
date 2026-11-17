@@ -7,8 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "conteudo:extrair": "node scripts/extrair-legado.mjs",
-    "conteudo:auditar": "node scripts/auditar.mjs"
+    "conteudo:extrair": "node scripts/extrair-legado.mjs && node scripts/extrair-paginas.mjs && node scripts/gerar-redirecionamentos.mjs",
+    "teste:painel": "tsx --tsconfig tsconfig.json scripts/testes/painel.mts",
+    "teste:gravacao": "tsx --tsconfig tsconfig.json scripts/testes/gravacao.mts",
+    "teste": "npm run teste:painel && npm run teste:gravacao"
   },
   "dependencies": {
     "next": "16.2.12",
